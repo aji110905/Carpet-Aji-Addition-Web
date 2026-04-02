@@ -11,9 +11,4 @@ rules:
     category: "Category"
     default_value: "Default Value"
     options: "Options"
-commands:
-  title: "Commands"
-  description: "All commands added by Carpet Aji Addition"
-  usage: "Usage"
-  permission: "Permission"
-  command_description: "Description"
+#commands:

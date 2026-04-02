@@ -11,7 +11,7 @@ async function loadTranslations() {
         const stack = [];
         const lines = yamlText.split('\n');
         lines.forEach(line => {
-            line = line.trimEnd(); // 只去除右侧空格，保留左侧缩进
+            line = line.trimEnd();
             if (!line || line.startsWith('#')) return;
             const match = line.match(/^(\s*)([^:]+):(.*)$/);
             if (match) {
