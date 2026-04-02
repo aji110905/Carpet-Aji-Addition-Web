@@ -2,30 +2,32 @@ let currentLang = 'en';
 let translations = {};
 
 async function loadTranslations() {
-    //TODO: Load translations from YAML files
-    function parseYAML(yaml) {
+    async function parseYAML(filePath) {
+        const response = await fetch(filePath);
+        if (!response.ok) throw new Error(`文件加载失败：${response.status}`);
+        const yamlText = await response.text();
         const result = {};
-        const lines = yaml.split('\n');
         let currentObj = result;
-        let stack = [];
+        const stack = [];
+        const lines = yamlText.split('\n');
         lines.forEach(line => {
-            line = line.trim();
+            line = line.trimEnd(); // 只去除右侧空格，保留左侧缩进
             if (!line || line.startsWith('#')) return;
             const match = line.match(/^(\s*)([^:]+):(.*)$/);
             if (match) {
                 const indent = match[1].length;
                 const key = match[2].trim();
-                const value = match[3].trim();
+                let value = match[3].trim();
                 while (stack.length > 0 && stack[stack.length - 1].indent >= indent) {
                     stack.pop();
                     currentObj = stack.length > 0 ? stack[stack.length - 1].obj : result;
                 }
                 if (value) {
-                    currentObj[key] = value.replace(/^"|"$/g, '');
+                    currentObj[key] = value.replace(/^["']|["']$/g, '');
                 } else {
                     const newObj = {};
                     currentObj[key] = newObj;
-                    stack.push({ indent, obj: currentObj });
+                    stack.push({ indent, obj: newObj });
                     currentObj = newObj;
                 }
             }
@@ -33,8 +35,8 @@ async function loadTranslations() {
 
         return result;
     }
-    translations.en = parseYAML(enYAML);
-    translations.zh = parseYAML(zhYAML);
+    translations.en = parseYAML("https://raw.githubusercontent.com/aji110905/Carpet-Aji-Addition-Web/master/lang/en.yml");
+    translations.zh = parseYAML("https://raw.githubusercontent.com/aji110905/Carpet-Aji-Addition-Web/master/lang/zh.yml");
     updateLanguage();
 }
 
