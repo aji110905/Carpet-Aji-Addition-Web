@@ -4,7 +4,6 @@ let translations = {};
 async function loadTranslations() {
     async function parseYAML(filePath) {
         const response = await fetch(filePath);
-        if (!response.ok) throw new Error(`文件加载失败：${response.status}`);
         const yamlText = await response.text();
         const result = {};
         let currentObj = result;
@@ -34,12 +33,8 @@ async function loadTranslations() {
         });
         return result;
     }
-    try {
-        translations.en = await parseYAML("https://aji110905.github.io/Carpet-Aji-Addition-Web/lang/en.yml");
-        translations.zh = await parseYAML("https://aji110905.github.io/Carpet-Aji-Addition-Web/lang/zh.yml");
-    } catch (error) {
-        console.log(error)
-    }
+    translations.en = await parseYAML("https://aji110905.github.io/Carpet-Aji-Addition-Web/lang/en.yml");
+    translations.zh = await parseYAML("https://aji110905.github.io/Carpet-Aji-Addition-Web/lang/zh.yml");
     updateLanguage();
 }
 
