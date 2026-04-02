@@ -8,7 +8,7 @@
         }
     },
     "home": {
-        "description": "一个fabric-Carpet扩展的wiki",
+        "description": "一个fabric-carpet扩展的wiki",
         "features": {
             "title": "功能",
             "rule": {
