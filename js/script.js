@@ -2,8 +2,8 @@ let currentLang = 'en';
 let translations = {};
 
 async function loadTranslations() {
-    translations.en = (await fetch("https://aji110905.github.io/Carpet-Aji-Addition-Web/lang/en.json")).json();
-    translations.zh = (await fetch("https://aji110905.github.io/Carpet-Aji-Addition-Web/lang/zh.json")).json();
+    translations.en = await (await fetch("https://aji110905.github.io/Carpet-Aji-Addition-Web/lang/en.json")).json();
+    translations.zh = await (await fetch("https://aji110905.github.io/Carpet-Aji-Addition-Web/lang/zh.json")).json();
     updateLanguage();
 }
 
