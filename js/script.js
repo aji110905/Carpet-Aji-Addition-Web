@@ -35,8 +35,8 @@ async function loadTranslations() {
         return result;
     }
     try {
-        translations.en = await parseYAML("/lang/en.yml");
-        translations.zh = await parseYAML("/lang/zh.yml");
+        translations.en = await parseYAML("/Carpet-Aji-Addition-Web/lang/en.yml");
+        translations.zh = await parseYAML("/Carpet-Aji-Addition-Web/lang/en.yml");
     } catch (error) {
         console.log(error)
     }
