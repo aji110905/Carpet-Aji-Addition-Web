@@ -5,6 +5,7 @@
         "navigation": {
             "home": "Home",
             "rules": "Rules",
+            "recipes": "Recipes",
             "commands": "Commands"
         }
     },

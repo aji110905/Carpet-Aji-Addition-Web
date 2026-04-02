@@ -5,14 +5,15 @@
         "navigation": {
             "home": "首页",
             "rules": "规则",
+            "recipes": "配方",
             "commands": "命令"
         }
     },
     "rules": {
         "category": {
-            "ordinary": "常规",
-            "recipe": "配方",
-            "command": "命令"
+            "ordinary": "常规规则",
+            "recipe": "配方规则",
+            "command": "命令规则"
         },
         "meta": {
             "category": "类别",
