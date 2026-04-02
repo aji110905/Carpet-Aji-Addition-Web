@@ -61,9 +61,7 @@ function updateLanguage() {
                 }
             }
         }
-        if (result) {
-            element.textContent = result;
-        }
+        element.textContent = result || key;
     });
 }
 
