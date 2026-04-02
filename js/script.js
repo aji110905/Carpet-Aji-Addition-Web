@@ -35,8 +35,8 @@ async function loadTranslations() {
         return result;
     }
     try {
-        translations.en = await parseYAML("/Carpet-Aji-Addition-Web/lang/en.yml");
-        translations.zh = await parseYAML("/Carpet-Aji-Addition-Web/lang/en.yml");
+        translations.en = await parseYAML("https://aji110905.github.io/Carpet-Aji-Addition-Web/lang/en.yml");
+        translations.zh = await parseYAML("https://aji110905.github.io/Carpet-Aji-Addition-Web/lang/en.yml");
     } catch (error) {
         console.log(error)
     }
