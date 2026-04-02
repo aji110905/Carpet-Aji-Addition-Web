@@ -40,9 +40,10 @@ async function loadTranslations() {
     }
     try {
         // 使用相对路径加载翻译文件
-        // 这样可以避免跨域请求和GitHub的速率限制
-        translations.en = await parseYAML("lang/en.yml");
-        translations.zh = await parseYAML("lang/zh.yml");
+        // 添加时间戳参数避免缓存问题
+        const timestamp = new Date().getTime();
+        translations.en = await parseYAML(`lang/en.yml?v=${timestamp}`);
+        translations.zh = await parseYAML(`lang/zh.yml?v=${timestamp}`);
         console.log('所有翻译文件加载完成:', translations);
         updateLanguage();
     } catch (error) {
