@@ -1,0 +1,250 @@
+/* Global styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header styles */
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 1.5rem;
+    position: relative;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: block;
+    padding: 0.5rem 0;
+}
+
+nav ul li a:hover {
+    color: #3498db;
+}
+
+/* Language dropdown */
+.language-dropdown {
+    position: relative;
+}
+
+.language-icon {
+    font-size: 1.2rem;
+    padding: 0.25rem;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #ffffff;
+    min-width: 150px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    z-index: 1000;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.dropdown-content a {
+    color: #333333;
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #f5f5f5;
+}
+
+.language-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Search bar */
+.search-container {
+    margin: 1rem 0;
+}
+
+#search-input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+#search-results {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Main content */
+main {
+    padding: 2rem 0;
+    min-height: 70vh;
+}
+
+section {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Home page styles */
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.feature-card {
+    padding: 1.5rem;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    border-left: 4px solid #3498db;
+}
+
+/* Rules page styles */
+.rules-category {
+    margin-bottom: 2rem;
+}
+
+.rules-category h3 {
+    margin-bottom: 1rem;
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 0.5rem;
+}
+
+.rule-card {
+    padding: 1.5rem;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    border-left: 4px solid #27ae60;
+}
+
+.rule-card h4 {
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+}
+
+.rule-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Commands page styles */
+.command-card {
+    padding: 1.5rem;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    border-left: 4px solid #e67e22;
+}
+
+.command-card h4 {
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+}
+
+.command-usage {
+    background-color: #f1f1f1;
+    padding: 0.5rem;
+    border-radius: 4px;
+    margin: 0.5rem 0;
+    font-family: monospace;
+}
+
+/* Footer styles */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 1.5rem 0;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    nav ul {
+        margin-top: 1rem;
+    }
+    
+    nav ul li {
+        margin-left: 0;
+        margin-right: 1rem;
+    }
+    
+    .switchers {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .switcher-btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .features {
+        grid-template-columns: 1fr;
+    }
+    
+    section {
+        padding: 1rem;
+    }
+}

@@ -1,0 +1,19 @@
+common:
+  description: "An extension mod for Minecraft Fabric Carpet"
+  version: "Version"
+  navigation:
+    home: "Home"
+    rules: "Rules"
+    commands: "Commands"
+#home:
+rules:
+  meta:
+    category: "Category"
+    default_value: "Default Value"
+    options: "Options"
+commands:
+  title: "Commands"
+  description: "All commands added by Carpet Aji Addition"
+  usage: "Usage"
+  permission: "Permission"
+  command_description: "Description"
