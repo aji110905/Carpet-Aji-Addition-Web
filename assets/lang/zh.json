@@ -9,7 +9,7 @@
     },
     "home": {
         "description": "一个fabric-Carpet扩展的wiki",
-        "function": {
+        "functions": {
             "title": "功能"
         }
     },
