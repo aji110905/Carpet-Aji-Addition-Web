@@ -1,12 +1,6 @@
 let currentLang = 'en';
 let translations = {};
 
-async function loadTranslations() {
-    translations.en = await (await fetch("https://aji110905.github.io/Carpet-Aji-Addition-Web/assets/lang/en.json")).json();
-    translations.zh = await (await fetch("https://aji110905.github.io/Carpet-Aji-Addition-Web/assets/lang/zh.json")).json();
-    updateLanguage();
-}
-
 function updateLanguage() {
     document.querySelectorAll('[data-lang]').forEach(element => {
         const key = element.getAttribute('data-lang');
@@ -35,11 +29,13 @@ function switchLanguage(lang) {
     localStorage.setItem('language', lang);
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', async function () {
     currentLang = localStorage.getItem('language') || 'en';
-    loadTranslations();
+    translations.en = await (await fetch("https://aji110905.github.io/Carpet-Aji-Addition-Web/assets/lang/en.json")).json();
+    translations.zh = await (await fetch("https://aji110905.github.io/Carpet-Aji-Addition-Web/assets/lang/zh.json")).json();
+    updateLanguage();
     document.querySelectorAll('.lang-switcher').forEach(button => {
-        button.addEventListener('click', function() {
+        button.addEventListener('click', function () {
             const lang = this.getAttribute('data-lang-code');
             switchLanguage(lang);
         });

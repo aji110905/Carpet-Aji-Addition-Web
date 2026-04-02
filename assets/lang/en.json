@@ -1,7 +1,5 @@
 {
     "common": {
-        "description": "An extension mod for Minecraft Fabric Carpet",
-        "version": "Version",
         "navigation": {
             "home": "Home",
             "rules": "Rules",
