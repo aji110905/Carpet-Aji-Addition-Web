@@ -3,12 +3,9 @@ let translations = {};
 
 async function loadTranslations() {
     async function parseYAML(filePath) {
-        console.log('正在加载翻译文件:', filePath);
         const response = await fetch(filePath);
-        console.log('响应状态:', response.status);
-        if (!response.ok) throw new Error(`文件加载失败：${response.status} ${response.statusText}`);
+        if (!response.ok) throw new Error(`文件加载失败：${response.status}`);
         const yamlText = await response.text();
-        console.log('加载的YAML内容:', yamlText);
         const result = {};
         let currentObj = result;
         const stack = [];
@@ -35,22 +32,11 @@ async function loadTranslations() {
                 }
             }
         });
-        console.log('解析后的翻译数据:', result);
         return result;
     }
-    try {
-        // 使用相对路径加载翻译文件
-        // 添加时间戳参数避免缓存问题
-        const timestamp = new Date().getTime();
-        translations.en = await parseYAML(`lang/en.yml?v=${timestamp}`);
-        translations.zh = await parseYAML(`lang/zh.yml?v=${timestamp}`);
-        console.log('所有翻译文件加载完成:', translations);
-        updateLanguage();
-    } catch (error) {
-        console.error('加载翻译文件失败:', error);
-        // 显示错误信息以便调试
-        alert('加载翻译文件失败，请检查网络连接或文件路径是否正确。');
-    }
+    translations.en = await parseYAML("https://raw.githubusercontent.com/aji110905/Carpet-Aji-Addition-Web/master/lang/en.yml");
+    translations.zh = await parseYAML("https://raw.githubusercontent.com/aji110905/Carpet-Aji-Addition-Web/master/lang/zh.yml");
+    updateLanguage();
 }
 
 function updateLanguage() {
