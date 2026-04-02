@@ -32,11 +32,10 @@ async function loadTranslations() {
                 }
             }
         });
-
         return result;
     }
-    translations.en = parseYAML("https://raw.githubusercontent.com/aji110905/Carpet-Aji-Addition-Web/master/lang/en.yml");
-    translations.zh = parseYAML("https://raw.githubusercontent.com/aji110905/Carpet-Aji-Addition-Web/master/lang/zh.yml");
+    translations.en = await parseYAML("https://raw.githubusercontent.com/aji110905/Carpet-Aji-Addition-Web/master/lang/en.yml");
+    translations.zh = await parseYAML("https://raw.githubusercontent.com/aji110905/Carpet-Aji-Addition-Web/master/lang/zh.yml");
     updateLanguage();
 }
 
