@@ -7,6 +7,12 @@
             "commands": "命令"
         }
     },
+    "home": {
+        "description": "一个fabric-Carpet扩展的wiki",
+        "function": {
+            "title": "功能"
+        }
+    },
     "rules": {
         "category": {
             "ordinary": "常规规则",
