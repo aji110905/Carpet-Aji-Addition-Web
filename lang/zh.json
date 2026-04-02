@@ -1,0 +1,18 @@
+{
+  "common": {
+    "description": "Minecraft Fabric Carpet的扩展模组",
+    "version": "版本",
+    "navigation": {
+      "home": "首页",
+      "rules": "规则",
+      "commands": "命令"
+    }
+  },
+  "rules": {
+    "meta": {
+      "category": "类别",
+      "default_value": "默认值",
+      "options": "选项"
+    }
+  }
+}

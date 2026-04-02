@@ -2,39 +2,8 @@ let currentLang = 'en';
 let translations = {};
 
 async function loadTranslations() {
-    async function parseYAML(filePath) {
-        const response = await fetch(filePath);
-        const yamlText = await response.text();
-        const result = {};
-        let currentObj = result;
-        const stack = [];
-        const lines = yamlText.split('\n');
-        lines.forEach(line => {
-            line = line.trimEnd();
-            if (!line || line.startsWith('#')) return;
-            const match = line.match(/^(\s*)([^:]+):(.*)$/);
-            if (match) {
-                const indent = match[1].length;
-                const key = match[2].trim();
-                let value = match[3].trim();
-                while (stack.length > 0 && stack[stack.length - 1].indent >= indent) {
-                    stack.pop();
-                    currentObj = stack.length > 0 ? stack[stack.length - 1].obj : result;
-                }
-                if (value) {
-                    currentObj[key] = value.replace(/^["']|["']$/g, '');
-                } else {
-                    const newObj = {};
-                    currentObj[key] = newObj;
-                    stack.push({ indent, obj: newObj });
-                    currentObj = newObj;
-                }
-            }
-        });
-        return result;
-    }
-    translations.en = await parseYAML("https://aji110905.github.io/Carpet-Aji-Addition-Web/lang/en.yml");
-    translations.zh = await parseYAML("https://aji110905.github.io/Carpet-Aji-Addition-Web/lang/zh.yml");
+    translations.en = (await fetch("https://aji110905.github.io/Carpet-Aji-Addition-Web/lang/en.json")).json();
+    translations.zh = (await fetch("https://aji110905.github.io/Carpet-Aji-Addition-Web/lang/zh.json")).json();
     updateLanguage();
 }
 

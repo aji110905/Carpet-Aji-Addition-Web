@@ -1,0 +1,18 @@
+{
+  "common": {
+    "description": "An extension mod for Minecraft Fabric Carpet",
+    "version": "Version",
+    "navigation": {
+      "home": "Home",
+      "rules": "Rules",
+      "commands": "Commands"
+    }
+  },
+  "rules": {
+    "meta": {
+      "category": "Category",
+      "default_value": "Default Value",
+      "options": "Options"
+    }
+  }
+}
