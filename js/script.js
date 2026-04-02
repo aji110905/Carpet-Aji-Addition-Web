@@ -39,23 +39,16 @@ async function loadTranslations() {
         return result;
     }
     try {
-        // 尝试使用相对路径
+        // 使用相对路径加载翻译文件
+        // 这样可以避免跨域请求和GitHub的速率限制
         translations.en = await parseYAML("lang/en.yml");
         translations.zh = await parseYAML("lang/zh.yml");
         console.log('所有翻译文件加载完成:', translations);
         updateLanguage();
     } catch (error) {
         console.error('加载翻译文件失败:', error);
-        // 尝试使用GitHub raw URL作为备选
-        try {
-            console.log('尝试使用GitHub raw URL加载...');
-            translations.en = await parseYAML("https://raw.githubusercontent.com/aji110905/Carpet-Aji-Addition-Web/master/lang/en.yml");
-            translations.zh = await parseYAML("https://raw.githubusercontent.com/aji110905/Carpet-Aji-Addition-Web/master/lang/zh.yml");
-            console.log('使用GitHub raw URL加载成功:', translations);
-            updateLanguage();
-        } catch (secondError) {
-            console.error('使用GitHub raw URL加载也失败:', secondError);
-        }
+        // 显示错误信息以便调试
+        alert('加载翻译文件失败，请检查网络连接或文件路径是否正确。');
     }
 }
 
