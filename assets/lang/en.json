@@ -4,7 +4,8 @@
             "home": "Home",
             "rules": "Rules",
             "recipes": "Recipes",
-            "commands": "Commands"
+            "commands": "Commands",
+            "changelog": "Changelog"
         }
     },
     "rules": {

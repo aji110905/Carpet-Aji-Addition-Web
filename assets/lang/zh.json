@@ -4,11 +4,24 @@
             "home": "首页",
             "rules": "规则",
             "recipes": "配方",
-            "commands": "命令"
+            "commands": "命令",
+            "changelog": "更新日志"
+        }
+    },
+    "changelog": {
+        "title": "更新日志",
+        "description": "很抱歉，更新日志目前只有中文版本",
+        "section": {
+            "added": "新增",
+            "changed": "更改",
+            "fixed": "修复",
+            "removed": "移除",
+            "optimized": "优化",
+            "support": "支持的Minecraft版本"
         }
     },
     "home": {
-        "description": "一个fabric-carpet扩展的wiki",
+        "description": "一个fabric-carpet扩展的，包含了众多 Carpet 风格的实用工具和有趣的特性",
         "features": {
             "title": "功能",
             "rule": {
