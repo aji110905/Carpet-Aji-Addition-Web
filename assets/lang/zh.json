@@ -21,7 +21,7 @@
         }
     },
     "home": {
-        "description": "一个fabric-carpet扩展的，包含了众多 Carpet 风格的实用工具和有趣的特性",
+        "description": "一个fabric-carpet扩展，包含了众多 Carpet 风格的实用工具和有趣的特性",
         "features": {
             "title": "功能",
             "rule": {
