@@ -8,11 +8,84 @@
             "changelog": "Changelog"
         }
     },
+    "changelog": {
+        "title": "Changelog",
+        "description": "Sorry, the changelog is currently only available in Chinese",
+        "section": {
+            "added": "Added",
+            "changed": "Changed",
+            "fixed": "Fixed",
+            "removed": "Removed",
+            "optimized": "Optimized",
+            "support": "Supported Minecraft Versions"
+        }
+    },
+    "home": {
+        "description": "A fabric-carpet extension with many Carpet-style utility tools and interesting features",
+        "features": {
+            "title": "Features",
+            "rule": {
+                "title": "New Rules",
+                "description": {
+                    "0": "Added many new Carpet rules",
+                    "1": "These rules allow you to control the game and change game behavior.",
+                    "2": "Does not change the vanilla game by default"
+                }
+            },
+            "recipe": {
+                "title": "New Recipes",
+                "description": {
+                    "0": "Added many new recipes",
+                    "1": "These recipes allow you to create hard-to-obtain items using simple items",
+                    "2": "You need to enable the corresponding rule to use the recipes"
+                }
+            },
+            "command": {
+                "title": "New Commands",
+                "description": {
+                    "0": "Added many new commands",
+                    "1": "These commands allow you to perform special operations",
+                    "2": "You need to enable the corresponding rule to use the commands"
+                }
+            }
+        },
+        "links": {
+            "title": "Related Links",
+            "download": {
+                "title": "Download Mod",
+                "description": {
+                    "0": "Supports Minecraft 1.21+",
+                    "1": "Download on Modrinth",
+                    "2": "Click to go to Modrinth"
+                }
+            },
+            "source": {
+                "title": "Source Code",
+                "description": {
+                    "0": "View project source code",
+                    "1": "Contributions to the mod are welcome",
+                    "2": "To report bugs, please submit issues in the corresponding repository"
+                },
+                "v1": "1.21-1.21.1 Repository",
+                "v2": "26.1+ Repository"
+            }
+        }
+    },
     "rules": {
+        "title": "Rules",
+        "description": "This is a list of all rules, you can use the /carpet list CAA command in-game to view them",
+        "category": {
+            "ordinary": "Ordinary Rules",
+            "recipe": "Recipe Rules",
+            "command": "Command Rules"
+        },
         "meta": {
             "category": "Category",
             "default_value": "Default Value",
             "options": "Options"
+        },
+        "rules": {
+
         }
     }
 }

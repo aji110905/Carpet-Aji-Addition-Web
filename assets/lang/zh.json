@@ -72,6 +72,8 @@
         }
     },
     "rules": {
+        "title": "规则",
+        "description": "这是所有规则的列表，你可以在游戏内使用 /carpet list CAA 命令查看",
         "category": {
             "ordinary": "常规规则",
             "recipe": "配方规则",
@@ -81,6 +83,9 @@
             "category": "类别",
             "default_value": "默认值",
             "options": "选项"
+        },
+        "rules": {
+
         }
     }
 }
