@@ -66,7 +66,7 @@
                     "1": "Contributions to the mod are welcome",
                     "2": "To report bugs, please submit issues in the corresponding repository"
                 },
-                "v1": "1.21-1.21.1 Repository",
+                "v1": "1.21-1.21.11 Repository",
                 "v2": "26.1+ Repository"
             }
         }
@@ -150,6 +150,26 @@
                     "name": "dragonBreathRecipe",
                     "desc": "Added a proper recipe for dragon's breath."
                 }
+            }
+        }
+    },
+    "commands": {
+        "title": "Commands",
+        "description": "This is a list of all commands, you can use these commands in-game",
+        "follow": {
+            "description": "Command to manage follow items",
+            "subcommands": {
+                "add": "Add item to follow list",
+                "remove": "Remove item from follow list",
+                "list": "View items in follow list",
+                "color": "Manage color of follow items"
+            }
+        },
+        "mods": {
+            "description": "Command to view mod information",
+            "subcommands": {
+                "list": "List all installed mods",
+                "info": "View detailed information about a specific mod"
             }
         }
     }

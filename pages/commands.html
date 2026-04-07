@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carpet Aji Addition</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/commands.css">
     <link rel="icon" type="image/png" href="https://aji110905.github.io/Carpet-Aji-Addition-Web/assets/favicon.png">
 </head>
 <body>
@@ -35,15 +36,47 @@
     <main>
         <div class="container">
             <section>
-                <h1></h1>
-                <p></p>
+                <h1 data-lang="commands.title"></h1>
+                <p data-lang="commands.description"></p>
             </section>
             
-            <section>
+            <section class="commands-container">
                 <div class="command-card">
-                    <h4></h4>
-                    <p></p>
-                    <div class="command-usage"></div>
+                    <h4>/follow</h4>
+                    <p data-lang="commands.follow.description"></p>
+                    <div class="command-usage">
+                        <div class="usage-item">
+                            <h5 data-lang="commands.follow.subcommands.add"></h5>
+                            <code>/follow add &ltitem ID&gt</code>
+                        </div>
+                        <div class="usage-item">
+                            <h5 data-lang="commands.follow.subcommands.remove"></h5>
+                            <code>/follow remove &ltitem ID&gt</code>
+                        </div>
+                        <div class="usage-item">
+                            <h5 data-lang="commands.follow.subcommands.list"></h5>
+                            <code>/follow list</code>
+                        </div>
+                        <div class="usage-item">
+                            <h5 data-lang="commands.follow.subcommands.color"></h5>
+                            <code>/follow color set &ltcolor&gt</code>
+                            <code>/follow color show</code>
+                        </div>
+                    </div>
+                </div>
+                <div class="command-card">
+                    <h4>/mods</h4>
+                    <p data-lang="commands.mods.description"></p>
+                    <div class="command-usage">
+                        <div class="usage-item">
+                            <h5 data-lang="commands.mods.subcommands.list"></h5>
+                            <code>/mods list</code>
+                        </div>
+                        <div class="usage-item">
+                            <h5 data-lang="commands.mods.subcommands.info"></h5>
+                            <code>/mods &ltmod name&gt</code>
+                        </div>
+                    </div>
                 </div>
             </section>
         </div>

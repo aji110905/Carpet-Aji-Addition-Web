@@ -23,10 +23,19 @@ function updateLanguage() {
     });
 }
 
-function switchLanguage(lang) {
-    currentLang = lang;
-    updateLanguage();
-    localStorage.setItem('language', lang);
+function updateLanguageOptions() {
+    document.querySelectorAll('.lang-switcher').forEach(button => {
+        const lang = button.getAttribute('data-lang-code');
+        if (lang === currentLang) {
+            button.classList.add('active');
+            button.style.pointerEvents = 'none';
+            button.style.opacity = '0.6';
+        } else {
+            button.classList.remove('active');
+            button.style.pointerEvents = 'auto';
+            button.style.opacity = '1';
+        }
+    });
 }
 
 document.addEventListener('DOMContentLoaded', async function () {
@@ -34,10 +43,14 @@ document.addEventListener('DOMContentLoaded', async function () {
     translations.en = await (await fetch("https://aji110905.github.io/Carpet-Aji-Addition-Web/assets/lang/en.json")).json();
     translations.zh = await (await fetch("https://aji110905.github.io/Carpet-Aji-Addition-Web/assets/lang/zh.json")).json();
     updateLanguage();
+    updateLanguageOptions();
     document.querySelectorAll('.lang-switcher').forEach(button => {
         button.addEventListener('click', function () {
             const lang = this.getAttribute('data-lang-code');
-            switchLanguage(lang);
+            currentLang = lang;
+            updateLanguage();
+            updateLanguageOptions();
+            localStorage.setItem('language', lang);
         });
     });
 });

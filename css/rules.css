@@ -1,0 +1,32 @@
+.rules-category {
+    margin-bottom: 2rem;
+}
+
+.rules-category h3 {
+    margin-bottom: 1rem;
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 0.5rem;
+}
+
+.rule-card {
+    padding: 1.5rem;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    border-left: 4px solid #27ae60;
+}
+
+.rule-card h4 {
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+}
+
+.rule-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #666;
+}
