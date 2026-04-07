@@ -172,5 +172,15 @@
                 "info": "View detailed information about a specific mod"
             }
         }
+    },
+    "recipes": {
+        "title": "Recipes",
+        "description": "This is a list of all custom recipes added by Carpet Aji Addition",
+        "dragon_egg": {
+            "title": "Dragon Egg Recipe"
+        },
+        "dragon_breath": {
+            "title": "Dragon Breath Recipe"
+        }
     }
 }

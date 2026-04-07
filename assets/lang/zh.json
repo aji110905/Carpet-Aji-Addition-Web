@@ -172,5 +172,15 @@
                 "info": "查看指定模组的详细信息"
             }
         }
+    },
+    "recipes": {
+        "title": "配方",
+        "description": "这是 Carpet Aji Addition 添加的所有自定义配方列表",
+        "dragon_egg": {
+            "title": "龙蛋配方"
+        },
+        "dragon_breath": {
+            "title": "龙息配方"
+        }
     }
 }
