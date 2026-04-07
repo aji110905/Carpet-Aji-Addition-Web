@@ -84,8 +84,73 @@
             "default_value": "默认值",
             "options": "选项"
         },
-        "rules": {
-
+        "carpet": {
+            "category": {
+                "CAA": "CAA",
+                "SURVIVAL": "生存",
+                "CREATIVE": "创造",
+                "FEATURE": "特性",
+                "COMMAND": "命令",
+                "RECIPE": "配方"
+            },
+            "rule": {
+                "glowingHopperMinecart": {
+                    "name": "发光的漏斗矿车 (glowingHopperMinecart)",
+                    "desc": "漏斗矿车被锁定时会发出红光，反之白光。"
+                },
+                "sitOnTheGround": {
+                    "name": "席地而坐 (sitOnTheGround)",
+                    "desc": "多次蹲下可以坐到地上。"
+                },
+                "lockAllHopper": {
+                    "name": "无能的漏斗 (lockAllHopper)",
+                    "desc": "所有漏斗都会被锁定，无论他有没有接受到红石信号。"
+                },
+                "keepOpeningVault": {
+                    "name": "无尽宝库 (keepOpeningVault)",
+                    "desc": "同一个玩家可以一直开启同一个宝库。"
+                },
+                "lockAllHopperMinecart": {
+                    "name": "无能的漏斗矿车 (lockAllHopperMinecart)",
+                    "desc": "所有漏斗矿车都会被锁定，无论他下面是不是充能的激活铁轨。"
+                },
+                "cactusWrench": {
+                    "name": "翻转仙人掌 (cactusWrench)",
+                    "desc": "仙人掌在副手时，放出来的方块为反方向。"
+                },
+                "tameHorse": {
+                    "name": "听话的马 (tameHorse)",
+                    "desc": "你可以100%驯服马。"
+                },
+                "safeMagmaBlock": {
+                    "name": "不烫脚的岩浆块 (safeMagmaBlock)",
+                    "desc": "当你站在岩浆块时不会再掉血。"
+                },
+                "toughTurtleEgg": {
+                    "name": "坚韧海龟蛋 (toughTurtleEgg)",
+                    "desc": "海龟蛋不会被踩碎。"
+                },
+                "removeEnderPearlDamage": {
+                    "name": "移除末影珍珠伤害 (removeEnderPearlDamage)",
+                    "desc": "末影珍珠传送后不会造成伤害"
+                },
+                "commandFollow": {
+                    "name": "follow命令 (commandFollow)",
+                    "desc": "可以使用/follow命令。"
+                },
+                "commandMods": {
+                    "name": "mods命令 (commandMods)",
+                    "desc": "可以使用/mods命令。"
+                },
+                "dragonEggRecipe": {
+                    "name": "可合成龙蛋 (dragonEggRecipe)",
+                    "desc": "为龙蛋添加了合理的配方。"
+                },
+                "dragonBreathRecipe": {
+                    "name": "可合成龙息 (dragonBreathRecipe)",
+                    "desc": "为龙息添加了合理的配方。"
+                }
+            }
         }
     }
 }

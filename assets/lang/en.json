@@ -84,8 +84,73 @@
             "default_value": "Default Value",
             "options": "Options"
         },
-        "rules": {
-
+        "carpet": {
+            "category": {
+                "CAA": "CAA",
+                "SURVIVAL": "Survival",
+                "CREATIVE": "Creative",
+                "FEATURE": "Feature",
+                "COMMAND": "Command",
+                "RECIPE": "Recipe"
+            },
+            "rule": {
+                "glowingHopperMinecart": {
+                    "name": "glowingHopperMinecart",
+                    "desc": "When a hopper minecart is locked, it glows red; otherwise, it glows white."
+                },
+                "sitOnTheGround": {
+                    "name": "sitOnTheGround",
+                    "desc": "Sit on the ground by crouching multiple times."
+                },
+                "lockAllHopper": {
+                    "name": "lockAllHopper",
+                    "desc": "All hoppers will be locked, regardless of whether they receive a redstone signal."
+                },
+                "keepOpeningVault": {
+                    "name": "keepOpeningVault",
+                    "desc": "The same player can open the same vault repeatedly."
+                },
+                "lockAllHopperMinecart": {
+                    "name": "lockAllHopperMinecart",
+                    "desc": "All hopper minecarts will be locked, regardless of whether the rail beneath them is a powered activator rail."
+                },
+                "cactusWrench": {
+                    "name": "cactusWrench",
+                    "desc": "When holding a cactus in the off-hand, placed blocks face the opposite direction."
+                },
+                "tameHorse": {
+                    "name": "tameHorse",
+                    "desc": "You can tame horses with 100% success."
+                },
+                "safeMagmaBlock": {
+                    "name": "safeMagmaBlock",
+                    "desc": "You no longer take damage when standing on magma blocks."
+                },
+                "toughTurtleEgg": {
+                    "name": "toughTurtleEgg",
+                    "desc": "Turtle eggs cannot be broken by stepping on them."
+                },
+                "removeEnderPearlDamage": {
+                    "name": "removeEnderPearlDamage",
+                    "desc": "The ender pearl will not cause damage after transmission"
+                },
+                "commandFollow": {
+                    "name": "commandFollow",
+                    "desc": "Can use the /follow command."
+                },
+                "commandMods": {
+                    "name": "commandMods",
+                    "desc": "Can use the /mods command."
+                },
+                "dragonEggRecipe": {
+                    "name": "dragonEggRecipe",
+                    "desc": "Added a proper recipe for the dragon egg."
+                },
+                "dragonBreathRecipe": {
+                    "name": "dragonBreathRecipe",
+                    "desc": "Added a proper recipe for dragon's breath."
+                }
+            }
         }
     }
 }
