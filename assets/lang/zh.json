@@ -134,6 +134,10 @@
                     "name": "移除末影珍珠伤害 (removeEnderPearlDamage)",
                     "desc": "末影珍珠传送后不会造成伤害"
                 },
+                "betterLogCommand": {
+                    "name": "更好的Log命令 (betterLogCommand)",
+                    "desc": "服务器重启后玩家不需要重新使用log命令服务器重启后玩家不需要重新使用log命令"
+                },
                 "commandFollow": {
                     "name": "follow命令 (commandFollow)",
                     "desc": "可以使用/follow命令。"

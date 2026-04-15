@@ -134,6 +134,10 @@
                     "name": "removeEnderPearlDamage",
                     "desc": "The ender pearl will not cause damage after transmission"
                 },
+                "betterLogCommand": {
+                    "name": "betterLogCommand",
+                    "desc": "After the server restarts, players do not need to use the log command again."
+                },
                 "commandFollow": {
                     "name": "commandFollow",
                     "desc": "Can use the /follow command."
