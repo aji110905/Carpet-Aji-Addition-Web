@@ -82,7 +82,8 @@
         "meta": {
             "category": "类别",
             "default_value": "默认值",
-            "options": "选项"
+            "options": "选项",
+            "version": "存在的Minecraft版本"
         },
         "carpet": {
             "category": {

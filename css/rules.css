@@ -25,8 +25,12 @@
 .rule-meta {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 3rem;
     margin-top: 1rem;
     font-size: 0.9rem;
     color: #666;
+}
+
+.rule-meta-item {
+    display: inline-block;
 }

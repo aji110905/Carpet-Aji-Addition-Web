@@ -82,7 +82,8 @@
         "meta": {
             "category": "Category",
             "default_value": "Default Value",
-            "options": "Options"
+            "options": "Options",
+            "version": "Available Minecraft Versions"
         },
         "carpet": {
             "category": {
