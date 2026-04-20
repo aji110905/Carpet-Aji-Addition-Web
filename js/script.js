@@ -21,9 +21,6 @@ function updateLanguage() {
         }
         element.textContent = result || key;
     });
-}
-
-function updateLanguageOptions() {
     document.querySelectorAll('.lang-switcher').forEach(button => {
         const lang = button.getAttribute('data-lang-code');
         if (lang === currentLang) {
@@ -43,13 +40,11 @@ document.addEventListener('DOMContentLoaded', async function () {
     translations.en = await (await fetch("https://aji110905.github.io/Carpet-Aji-Addition-Web/assets/lang/en.json")).json();
     translations.zh = await (await fetch("https://aji110905.github.io/Carpet-Aji-Addition-Web/assets/lang/zh.json")).json();
     updateLanguage();
-    updateLanguageOptions();
     document.querySelectorAll('.lang-switcher').forEach(button => {
         button.addEventListener('click', function () {
             const lang = this.getAttribute('data-lang-code');
             currentLang = lang;
             updateLanguage();
-            updateLanguageOptions();
             localStorage.setItem('language', lang);
         });
     });
